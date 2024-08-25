@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="relative top-48">
+    <div class="m-auto text-center">
+        <h1 class="text-4xl">Counter</h1>
+        <p id="inPut" class="mt-5 mb-5 shadow-lg text-3xl w-1/3 m-auto ">0</p>
+
+    </div>
+    <div class="flex justify-evenly w-1/3 m-auto">
+        <button id="Decrease" class="btn">Decrease</button>
+        <button id="Reset" class="btn">Reset</button>
+        <button id="Increase" class="btn">Increase</button>
+    </div>
+</div>
+</body>
+<script>
+let counter = 0;
+let Decrease = document.querySelector('#Decrease')
+let Reset = document.querySelector('#Reset')
+let Increase = document.querySelector('#Increase')
+let inPut = document.querySelector('#inPut')
+
+let all = ()=>{
+    inPut.innerHTML = counter
+
+}
+Increase.addEventListener('click',()=>{
+    counter++;
+    all()
+})
+Decrease.addEventListener('click',()=>{
+    counter--;
+    all()
+})
+Reset.addEventListener('click',()=>{
+    counter = 0;
+    all()
+})
+
+if(counter>0){
+    inPut.style.backgroundColor = `Heloo`
+   
+}
+
+
+
+</script>
+</html>
